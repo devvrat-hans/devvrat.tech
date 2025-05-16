@@ -1,0 +1,92 @@
+/* 
+ * About page specific styles
+ */
+
+.profile-section {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: var(--spacing-lg);
+    margin-bottom: var(--spacing-xl);
+}
+
+.profile-image {
+    border-radius: var(--border-radius);
+    overflow: hidden;
+}
+
+.profile-tagline {
+    color: var(--primary-color);
+    font-weight: 500;
+    margin-bottom: var(--spacing-md);
+}
+
+.profile-cta {
+    margin-top: var(--spacing-md);
+    display: flex;
+    gap: var(--spacing-sm);
+}
+
+.skills-section, 
+.experience-section, 
+.education-section, 
+.certificates-section {
+    margin-bottom: var(--spacing-xl);
+}
+
+.skill-category {
+    margin-bottom: var(--spacing-lg);
+}
+
+.skills-list li {
+    margin-bottom: var(--spacing-sm);
+}
+
+.timeline-content h4, 
+.education-item h4 {
+    color: var(--text-light);
+    font-weight: 500;
+    margin-bottom: var(--spacing-xs);
+}
+
+.timeline-period, 
+.education-period, 
+.certificate-date {
+    color: var(--text-light);
+    font-size: 0.875rem;
+    margin-bottom: var(--spacing-xs);
+}
+
+.education-item, 
+.certificate-item {
+    margin-bottom: var(--spacing-md);
+}
+
+.certificates-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: var(--spacing-md);
+}
+
+.certificate-item {
+    padding: var(--spacing-md);
+    background-color: var(--bg-color);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+}
+
+@media screen and (max-width: 992px) {
+    .profile-section {
+        grid-template-columns: 1fr;
+    }
+    
+    .profile-image {
+        max-width: 300px;
+        margin: 0 auto var(--spacing-md);
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .profile-cta {
+        flex-direction: column;
+    }
+}

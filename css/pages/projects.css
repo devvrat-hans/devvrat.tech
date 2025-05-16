@@ -1,0 +1,29 @@
+/* 
+ * Projects page specific styles
+ */
+
+.projects-showcase {
+    padding-bottom: var(--spacing-xl);
+}
+
+.project-content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+}
+
+.project-content h2 {
+    color: var(--text-color);
+    margin-bottom: var(--spacing-xs);
+}
+
+.project-image img {
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+}
+
+@media screen and (max-width: 768px) {
+    .project-content {
+        gap: var(--spacing-sm);
+    }
+}

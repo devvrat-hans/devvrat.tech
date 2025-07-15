@@ -1,0 +1,27 @@
+
+
+---
+
+remove this effect of raining 0's and 1's form the website
+
+---
+
+in the start of the terminal, terminal should not be written
+
+--
+
+after typing the commands, the terminal should move down, i can't try another command after this.
+
+--
+
+there should also be a way to clear the terminal like the cd command
+
+--
+
+
+
+--
+
+
+
+

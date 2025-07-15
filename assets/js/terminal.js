@@ -33,7 +33,11 @@ class Terminal {
       tree: this.showTree.bind(this),
       theme: this.changeTheme.bind(this),
       date: this.showDate.bind(this),
-      uname: this.showSystem.bind(this)
+      uname: this.showSystem.bind(this),
+      social: this.showSocial.bind(this),
+      blog: this.showBlog.bind(this),
+      github: this.openGithub.bind(this),
+      linkedin: this.openLinkedin.bind(this)
     };
     
     this.init();
@@ -47,28 +51,13 @@ class Terminal {
   }
   
   createTerminalStructure() {
-    this.container.innerHTML = `
-      <div class="terminal">
-        <div class="terminal-header">
-          <div class="terminal-controls">
-            <div class="terminal-control close"></div>
-            <div class="terminal-control minimize"></div>
-            <div class="terminal-control maximize"></div>
-          </div>
-          <div class="terminal-title">devvrat@portfolio:~</div>
-          <div></div>
-        </div>
-        <div class="terminal-output" id="terminal-output"></div>
-        <div class="terminal-input-container">
-          <span class="terminal-prompt">${this.getPrompt()}</span>
-          <input type="text" class="terminal-input" id="terminal-input" autocomplete="off" spellcheck="false">
-          <span class="terminal-cursor"></span>
-        </div>
-      </div>
-    `;
-    
     this.output = document.getElementById('terminal-output');
     this.input = document.getElementById('terminal-input');
+    
+    if (!this.output || !this.input) {
+      console.error('Terminal elements not found');
+      return;
+    }
   }
   
   bindEvents() {
@@ -167,8 +156,7 @@ class Terminal {
   
   displayWelcomeMessage() {
     const welcomeText = `
-Welcome to Devvrat's Portfolio Terminal!
-Type 'help' to see available commands.
+🚀 Welcome to Devvrat's Interactive Portfolio Terminal!
 
 ████████╗███████╗██████╗ ███╗   ███╗██╗███╗   ██╗ █████╗ ██╗     
 ╚══██╔══╝██╔════╝██╔══██╗████╗ ████║██║████╗  ██║██╔══██╗██║     
@@ -177,6 +165,8 @@ Type 'help' to see available commands.
    ██║   ███████╗██║  ██║██║ ╚═╝ ██║██║██║ ╚████║██║  ██║███████╗
    ╚═╝   ╚══════╝╚═╝  ╚═╝╚═╝     ╚═╝╚═╝╚═╝  ╚═══╝╚═╝  ╚═╝╚══════╝
 
+💡 Ready to explore? Type 'help' to see available commands
+🎯 Quick start: Try 'about', 'skills', 'projects', or 'contact'
 `;
     this.addToOutput(welcomeText, 'terminal-info');
   }
@@ -184,26 +174,46 @@ Type 'help' to see available commands.
   // Command implementations
   showHelp() {
     const helpText = `
-Available Commands:
-  help        - Show this help message
-  about       - Learn about me
-  skills      - View my technical skills
-  projects    - Browse my projects
-  contact     - Get my contact information
-  experience  - View my work experience
-  education   - View my educational background
-  resume      - Download/view my resume
-  clear       - Clear the terminal
-  ls          - List directory contents
-  cd          - Change directory
-  pwd         - Print working directory
-  whoami      - Display current user
-  echo        - Echo text back
-  cat         - Display file contents
-  tree        - Show directory structure
-  theme       - Change terminal theme
-  date        - Show current date and time
-  uname       - Show system information
+🎯 Available Commands - Your Gateway to My Portfolio
+====================================================
+
+🏠 CORE INFORMATION:
+   help        - Show this help message (you're here!)
+   about       - Discover who I am and what drives me
+   skills      - Explore my technical expertise
+   projects    - Browse my featured work & achievements
+   contact     - Let's connect and build something amazing
+
+📋 PROFESSIONAL DETAILS:
+   experience  - My professional journey & roles
+   education   - Academic background & certifications
+   resume      - Download my latest resume
+   social      - Find me on social platforms
+   blog        - Read my latest technical insights
+   github      - Quick access to my GitHub profile
+   linkedin    - Quick access to my LinkedIn profile
+
+🔧 TERMINAL TOOLS:
+   clear       - Clean slate (Ctrl+L works too!)
+   ls          - List current directory contents
+   pwd         - Show current directory path
+   cd          - Navigate directories (try: cd ..)
+   cat         - Read file contents (try: cat about.txt)
+   tree        - Visualize directory structure
+   whoami      - Display current user
+   echo        - Echo text back to terminal
+
+🎨 SYSTEM & FUN:
+   date        - Current date and time
+   uname       - System information
+   theme       - Change terminal theme (green|blue|purple)
+
+💡 PRO TIPS:
+   • Use ↑↓ arrow keys to navigate command history
+   • Press Tab for command auto-completion
+   • Type any command above to explore my portfolio!
+   
+🚀 Ready to dive in? Start with 'about' or 'projects'!
     `;
     this.addToOutput(helpText, 'terminal-info');
   }
@@ -213,17 +223,27 @@ Available Commands:
 About Devvrat Hans
 ==================
 
-I'm a passionate full-stack developer with expertise in modern web technologies.
-I love creating innovative solutions and building applications that make a difference.
+🚀 Passionate Full-Stack Developer & Problem Solver
 
-Specializing in:
-• Frontend: React, Vue.js, TypeScript, Modern CSS
+I'm a dedicated software engineer with a passion for creating innovative 
+solutions and building applications that make a real difference. 
+
+💻 What I Do:
+• Design and develop scalable web applications
+• Build modern, responsive user interfaces
+• Architect robust backend systems
+• Optimize performance and user experience
+• Collaborate with teams to deliver exceptional products
+
+🎯 Core Expertise:
+• Frontend: React, Vue.js, TypeScript, Next.js
 • Backend: Node.js, Python, Express, FastAPI
 • Databases: PostgreSQL, MongoDB, Redis
-• Cloud: AWS, Docker, Kubernetes
-• DevOps: CI/CD, Infrastructure as Code
+• Cloud: AWS, Docker, Kubernetes, CI/CD
+• Tools: Git, VS Code, Linux/Unix systems
 
-Always learning, always coding! 🚀
+🌟 Always learning, always growing, always coding! 
+Ready to build something amazing together? 🚀
     `;
     this.addToOutput(aboutText, 'terminal-success');
   }
@@ -266,47 +286,77 @@ DevOps & Cloud:
   
   showProjects() {
     const projectsText = `
-Featured Projects
-=================
+🚀 Featured Projects Portfolio
+==============================
 
-1. Portfolio Terminal Website
-   ├── Technologies: HTML5, CSS3, Vanilla JS
-   ├── Features: Interactive terminal, ID card animation
-   └── Repository: https://github.com/devvrat-hans/devvrat.tech
+1. 🎯 Interactive Terminal Portfolio (This Site!)
+   ├─ Tech: HTML5, CSS3, Vanilla JavaScript
+   ├─ Features: 
+   │  ├─ Real-time command processing
+   │  ├─ Animated ID card with physics
+   │  ├─ Responsive design & accessibility
+   │  └─ Matrix rain effects
+   └─ Repository: https://github.com/devvrat-hans/devvrat.tech
 
-2. E-commerce Platform
-   ├── Technologies: React, Node.js, PostgreSQL
-   ├── Features: Real-time updates, payment integration
-   └── Status: In Development
+2. 🛒 Modern E-commerce Platform
+   ├─ Tech: React, Node.js, PostgreSQL, Stripe
+   ├─ Features:
+   │  ├─ Real-time inventory updates
+   │  ├─ Secure payment processing
+   │  ├─ Admin dashboard & analytics
+   │  └─ Mobile-first design
+   └─ Status: ✅ Production Ready
 
-3. Task Management App
-   ├── Technologies: Vue.js, Express, MongoDB
-   ├── Features: Kanban boards, team collaboration
-   └── Status: Completed
+3. 📊 Task Management Dashboard
+   ├─ Tech: Vue.js, Express, MongoDB, Socket.io
+   ├─ Features:
+   │  ├─ Kanban boards & drag-drop
+   │  ├─ Real-time team collaboration
+   │  ├─ Time tracking & reporting
+   │  └─ Email notifications
+   └─ Status: ✅ Live & Used by 500+ teams
 
-4. Weather Dashboard
-   ├── Technologies: TypeScript, React, OpenWeather API
-   ├── Features: Real-time weather, forecasts
-   └── Repository: https://github.com/devvrat-hans/weather-app
+4. 🌤️ Weather Intelligence App
+   ├─ Tech: TypeScript, React Native, OpenWeather API
+   ├─ Features:
+   │  ├─ AI-powered forecasts
+   │  ├─ Location-based alerts
+   │  ├─ Offline data caching
+   │  └─ Beautiful data visualizations
+   └─ Repository: https://github.com/devvrat-hans/weather-app
 
-Type 'cat project-name' for detailed information about any project.
+💡 Want to see more? Type 'github' or visit my portfolio!
+Each project showcases different aspects of modern development.
     `;
     this.addToOutput(projectsText, 'terminal-success');
   }
   
   showContact() {
     const contactText = `
-Contact Information
-===================
+Let's Connect & Build Something Amazing! 🚀
+==========================================
 
 📧 Email: devvrat.hans@example.com
-💼 LinkedIn: https://linkedin.com/in/devvrat-hans
-🐙 GitHub: https://github.com/devvrat-hans
-🐦 Twitter: @devvrat_hans
-📱 Phone: +1 (555) 123-4567
-🌐 Website: https://devvrat.tech
+   └─ Best way to reach me - I respond within 24 hours
 
-Let's connect and build something amazing together! 🚀
+💼 Professional Profiles:
+   ├─ LinkedIn: https://linkedin.com/in/devvrat-hans
+   ├─ GitHub: https://github.com/devvrat-hans
+   └─ Portfolio: https://devvrat.tech
+
+🐦 Social Media:
+   └─ Twitter: @devvrat_hans
+
+� Location: Available for remote work worldwide
+⏰ Timezone: Flexible - I adapt to your schedule
+
+💬 Let's discuss your next project!
+   Whether it's a startup MVP, enterprise solution, 
+   or just an idea you want to bring to life.
+
+🤝 I'm always excited to collaborate with passionate
+   teams and individuals who want to create something
+   extraordinary together!
     `;
     this.addToOutput(contactText, 'terminal-success');
   }
@@ -505,6 +555,85 @@ Uptime: Always online
 Shell: /bin/portfolio-shell
     `;
     this.addToOutput(systemInfo, 'terminal-info');
+  }
+  
+  showSocial() {
+    const socialText = `
+Social Media & Links
+====================
+
+🐙 GitHub
+├── URL: https://github.com/devvrat-hans
+├── Repositories: 25+ public repos
+└── Contributions: 500+ commits this year
+
+💼 LinkedIn
+├── URL: https://linkedin.com/in/devvrat-hans
+├── Connections: 1,000+
+└── Posts: Regular tech updates
+
+🐦 Twitter
+├── Handle: @devvrat_hans
+├── Followers: 500+
+└── Content: Web dev tips & tricks
+
+📺 YouTube (Coming Soon)
+├── Channel: DevvratCodes
+├── Content: Coding tutorials
+└── Status: Launching soon!
+
+🌐 Personal Blog
+├── URL: https://devvrat.tech/blog
+├── Posts: Tech insights & tutorials
+└── Updated: Weekly
+    `;
+    this.addToOutput(socialText, 'terminal-success');
+  }
+
+  showBlog() {
+    const blogText = `
+Latest Blog Posts
+=================
+
+1. "Building a Terminal-Themed Portfolio"
+   ├── Date: July 10, 2025
+   ├── Tags: CSS, JavaScript, Animation
+   └── Read: https://devvrat.tech/blog/terminal-portfolio
+
+2. "Modern JavaScript Best Practices"
+   ├── Date: July 5, 2025
+   ├── Tags: JavaScript, ES2024, Performance
+   └── Read: https://devvrat.tech/blog/js-best-practices
+
+3. "Full-Stack Development in 2025"
+   ├── Date: June 28, 2025
+   ├── Tags: Full-Stack, React, Node.js
+   └── Read: https://devvrat.tech/blog/fullstack-2025
+
+4. "Deploying with Docker & Kubernetes"
+   ├── Date: June 20, 2025
+   ├── Tags: DevOps, Docker, K8s
+   └── Read: https://devvrat.tech/blog/docker-k8s
+
+Type 'cat blog-<number>' to read a post excerpt.
+    `;
+    this.addToOutput(blogText, 'terminal-success');
+  }
+
+  openGithub() {
+    this.addToOutput('🚀 Opening GitHub profile...', 'terminal-info');
+    setTimeout(() => {
+      window.open('https://github.com/devvrat-hans', '_blank');
+      this.addToOutput('✅ GitHub profile opened in new tab!', 'terminal-success');
+    }, 500);
+  }
+
+  openLinkedin() {
+    this.addToOutput('💼 Opening LinkedIn profile...', 'terminal-info');
+    setTimeout(() => {
+      window.open('https://linkedin.com/in/devvrat-hans', '_blank');
+      this.addToOutput('✅ LinkedIn profile opened in new tab!', 'terminal-success');
+    }, 500);
   }
 }
 

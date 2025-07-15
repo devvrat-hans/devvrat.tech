@@ -1,0 +1,179 @@
+{
+  "programmingLanguages": [
+    {
+      "name": "JavaScript/TypeScript",
+      "proficiency": 95,
+      "experience": "5 years",
+      "projects": 40,
+      "description": "Expert in ES6+, TypeScript, async programming, and modern JS frameworks"
+    },
+    {
+      "name": "Python",
+      "proficiency": 90,
+      "experience": "4 years",
+      "projects": 25,
+      "description": "Proficient in Django, FastAPI, data analysis, and automation scripts"
+    },
+    {
+      "name": "Java",
+      "proficiency": 80,
+      "experience": "3 years",
+      "projects": 15,
+      "description": "Spring Boot, microservices, and enterprise application development"
+    },
+    {
+      "name": "Go",
+      "proficiency": 60,
+      "experience": "1 year",
+      "projects": 5,
+      "description": "Backend services, APIs, and concurrent programming"
+    },
+    {
+      "name": "Rust",
+      "proficiency": 40,
+      "experience": "6 months",
+      "projects": 2,
+      "description": "Systems programming and performance-critical applications"
+    }
+  ],
+  "frontend": [
+    {
+      "name": "React/Next.js",
+      "proficiency": 95,
+      "experience": "4 years",
+      "description": "Advanced hooks, context, SSR/SSG, performance optimization"
+    },
+    {
+      "name": "Vue.js/Nuxt.js",
+      "proficiency": 85,
+      "experience": "3 years",
+      "description": "Composition API, Vuex/Pinia, server-side rendering"
+    },
+    {
+      "name": "Angular",
+      "proficiency": 70,
+      "experience": "2 years",
+      "description": "TypeScript, RxJS, Angular Material, enterprise applications"
+    },
+    {
+      "name": "CSS/SCSS/Tailwind",
+      "proficiency": 95,
+      "experience": "5 years",
+      "description": "Responsive design, animations, modern CSS features, utility-first CSS"
+    },
+    {
+      "name": "Web APIs",
+      "proficiency": 95,
+      "experience": "5 years",
+      "description": "REST, GraphQL, WebSockets, Service Workers, PWAs"
+    }
+  ],
+  "backend": [
+    {
+      "name": "Node.js/Express",
+      "proficiency": 95,
+      "experience": "4 years",
+      "description": "RESTful APIs, middleware, authentication, real-time applications"
+    },
+    {
+      "name": "Python/FastAPI",
+      "proficiency": 85,
+      "experience": "3 years",
+      "description": "Async APIs, data validation, automatic documentation"
+    },
+    {
+      "name": "PostgreSQL",
+      "proficiency": 90,
+      "experience": "4 years",
+      "description": "Complex queries, performance tuning, database design"
+    },
+    {
+      "name": "MongoDB",
+      "proficiency": 80,
+      "experience": "3 years",
+      "description": "NoSQL design, aggregation pipelines, indexing strategies"
+    },
+    {
+      "name": "Redis",
+      "proficiency": 75,
+      "experience": "2 years",
+      "description": "Caching, session storage, pub/sub messaging"
+    }
+  ],
+  "devopsCloud": [
+    {
+      "name": "Docker",
+      "proficiency": 85,
+      "experience": "3 years",
+      "description": "Containerization, multi-stage builds, Docker Compose"
+    },
+    {
+      "name": "AWS",
+      "proficiency": 80,
+      "experience": "3 years",
+      "description": "EC2, S3, Lambda, RDS, CloudFormation, API Gateway"
+    },
+    {
+      "name": "Kubernetes",
+      "proficiency": 65,
+      "experience": "1.5 years",
+      "description": "Pod management, services, ingress, helm charts"
+    },
+    {
+      "name": "CI/CD",
+      "proficiency": 80,
+      "experience": "3 years",
+      "description": "GitHub Actions, Jenkins, automated testing and deployment"
+    },
+    {
+      "name": "Linux/Unix",
+      "proficiency": 90,
+      "experience": "5 years",
+      "description": "Shell scripting, system administration, server management"
+    }
+  ],
+  "tools": [
+    {
+      "name": "Git",
+      "proficiency": 95,
+      "description": "Version control, branching strategies, collaborative development"
+    },
+    {
+      "name": "VS Code",
+      "proficiency": 95,
+      "description": "Extensions, debugging, productivity optimization"
+    },
+    {
+      "name": "Figma",
+      "proficiency": 70,
+      "description": "UI/UX design, prototyping, design system creation"
+    },
+    {
+      "name": "Postman",
+      "proficiency": 85,
+      "description": "API testing, documentation, automation"
+    },
+    {
+      "name": "Jira",
+      "proficiency": 80,
+      "description": "Project management, agile workflows, sprint planning"
+    }
+  ],
+  "softSkills": [
+    "Problem Solving",
+    "Team Leadership",
+    "Communication",
+    "Project Management",
+    "Mentoring",
+    "Code Review",
+    "Technical Writing",
+    "Agile/Scrum"
+  ],
+  "learning": [
+    "GraphQL Advanced Patterns",
+    "Microservices Architecture",
+    "Machine Learning",
+    "Blockchain Development",
+    "Mobile Development (React Native)"
+  ]
+}

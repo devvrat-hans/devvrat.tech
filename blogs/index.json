@@ -1,0 +1,47 @@
+{
+  "blogs": [
+    {
+      "id": 1,
+      "title": "Building a Terminal-Themed Portfolio Website",
+      "slug": "terminal-portfolio-website",
+      "description": "How I created an interactive terminal-themed portfolio with animated ID card and functional command-line interface.",
+      "author": "Devvrat Hans",
+      "publishedDate": "2025-01-15",
+      "lastModified": "2025-01-15",
+      "tags": ["Portfolio", "JavaScript", "CSS Animations", "Web Development"],
+      "category": "Web Development",
+      "readTime": "8 min read",
+      "featured": true,
+      "filePath": "/blogs/blog1.md",
+      "excerpt": "Creating a unique portfolio website is crucial for standing out as a developer. Learn how I built an interactive terminal-themed portfolio that combines nostalgic command-line aesthetics with modern web technologies.",
+      "thumbnail": "/assets/images/blog1-thumbnail.png",
+      "views": 1247,
+      "likes": 89
+    }
+  ],
+  "categories": [
+    "Web Development",
+    "JavaScript",
+    "CSS",
+    "Portfolio",
+    "Tutorial",
+    "Career"
+  ],
+  "tags": [
+    "JavaScript",
+    "CSS Animations",
+    "Portfolio",
+    "Terminal",
+    "Web Development",
+    "Frontend",
+    "HTML5",
+    "Responsive Design",
+    "UX/UI"
+  ],
+  "stats": {
+    "totalBlogs": 1,
+    "totalViews": 1247,
+    "totalLikes": 89,
+    "avgReadTime": "8 minutes"
+  }
+}

@@ -3,163 +3,259 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Devvrat's personal website showcasing projects, notes, and technical skills">
-    <meta name="keywords" content="developer, portfolio, projects, notes, technology">
-    <meta name="author" content="Devvrat">
+    <meta name="description" content="Devvrat Hans - Full Stack Developer Portfolio. Interactive terminal-themed portfolio showcasing skills, projects, and experience.">
+    <meta name="keywords" content="developer, portfolio, full stack, javascript, react, node.js, web development, terminal, interactive">
+    <meta name="author" content="Devvrat Hans">
     
-    <title>Devvrat | Home</title>
-    
-    <!-- Favicon -->
-    <link rel="icon" href="images/favicon.ico">
-    
-    <!-- CSS - Main file imports all modular CSS -->
-    <link rel="stylesheet" href="css/main.css">
-    
-    <!-- Custom scripts -->
-    <script defer src="js/typewriter.js"></script>
-    <script defer src="js/parallax.js"></script>
-    <script defer src="js/scroll-reveal.js"></script>
-    <script defer src="js/pattern-background.js"></script>
-    
-    <!-- Open Graph Meta Tags for better social sharing -->
-    <meta property="og:title" content="Devvrat's Portfolio">
-    <meta property="og:description" content="Projects, notes, and technical expertise by Devvrat">
-    <meta property="og:image" content="images/og-image.jpg">
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Devvrat Hans - Full Stack Developer Portfolio">
+    <meta property="og:description" content="Interactive terminal-themed portfolio showcasing modern web development skills and projects">
+    <meta property="og:image" content="https://devvrat.tech/assets/images/og-image.png">
     <meta property="og:url" content="https://devvrat.tech">
     <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Devvrat Hans Portfolio">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:creator" content="@devvrat_hans">
+    <meta name="twitter:title" content="Devvrat Hans - Full Stack Developer Portfolio">
+    <meta name="twitter:description" content="Interactive terminal-themed portfolio showcasing modern web development skills and projects">
+    <meta name="twitter:image" content="https://devvrat.tech/assets/images/twitter-card.png">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon-16x16.png">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="/assets/css/index.css">
+    <link rel="stylesheet" href="/assets/css/terminal.css">
+    <link rel="stylesheet" href="/assets/css/animations.css">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Devvrat Hans",
+        "jobTitle": "Full Stack Developer",
+        "url": "https://devvrat.tech",
+        "sameAs": [
+            "https://linkedin.com/in/devvrat-hans",
+            "https://github.com/devvrat-hans",
+            "https://twitter.com/devvrat_hans"
+        ],
+        "worksFor": {
+            "@type": "Organization",
+            "name": "TechCorp Inc."
+        },
+        "alumniOf": "University Name",
+        "knowsAbout": ["JavaScript", "React", "Node.js", "Python", "Full Stack Development"],
+        "description": "Passionate full-stack developer with 5+ years of experience building scalable web applications"
+    }
+    </script>
+    
+    <title>Devvrat Hans - Full Stack Developer | Interactive Portfolio</title>
 </head>
 <body>
-    <!-- Header will be loaded from template -->
-    <header></header>
-
-    <main>
-        <section class="hero">
-            <div class="hero-bg">
-                <div class="blob blob-1"></div>
-                <div class="blob blob-2"></div>
-                <div class="blob blob-3"></div>
-            </div>
-            <div class="container">
-                <div class="hero-content">
-                    <div class="hero-image">
-                        <img src="images/devvrat.jpeg" alt="Devvrat" class="avatar">
-                    </div>                <div class="hero-text">
-                    <h1 class="animated-headline">
-                        <span class="gradient-text" data-text="Devvrat">Devvrat</span>
-                    </h1>
-                    <div class="typewriter-container">
-                        <span class="typewriter" data-words='["Developer", "Designer", "Problem Solver"]'></span>
-                    </div>
-                    <br>
-                    <p class="hero-tagline">Crafting digital experiences through code and design</p>
-                    <div class="hero-cta">
-                        <a href="projects.html" class="btn btn-primary">View Projects</a>
-                        <a href="contact.html" class="btn btn-outline">Get in Touch</a>
-                    </div>
-                    <div class="social-links">
-                        <a href="https://github.com/" aria-label="GitHub" class="social-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                            </svg>
-                        </a>
-                        <a href="https://linkedin.com/" aria-label="LinkedIn" class="social-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
-                            </svg>
-                        </a>
-                        <a href="https://twitter.com/" aria-label="Twitter" class="social-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="featured-projects">
-            <div class="container">
-                <h2 class="section-title"><span class="gradient-text">Featured</span> Projects</h2>
-                <div class="projects-grid">
-                    <!-- Project cards with modern glass design -->
-                    <div class="project-card glass-card">
-                        <div class="project-image">
-                            <div class="project-tag">Web App</div>
-                        </div>
-                        <div class="project-content">
-                            <h3>Smart Task Manager</h3>
-                            <p>A productivity application with AI-powered task prioritization and time management features</p>
-                            <div class="project-tech">
-                                <span class="tech-tag">React</span>
-                                <span class="tech-tag">Node.js</span>
-                                <span class="tech-tag">MongoDB</span>
-                            </div>
-                            <a href="projects.html#project1" class="btn btn-sm btn-primary">View Details</a>
+    <!-- Skip to main content for accessibility -->
+    <a href="#main-content" class="skip-link" aria-label="Skip to main content">Skip to main content</a>
+    
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading-screen" role="status" aria-label="Loading portfolio">
+        <div class="loading-content">
+            <div class="loading-spinner"></div>
+            <p class="loading-text">Initializing terminal...</p>
+        </div>
+    </div>
+    
+    <!-- Main Portfolio Container -->
+    <main id="main-content" class="portfolio-container" role="main">
+        <!-- ID Card Section -->
+        <section class="id-card-section" aria-label="Developer ID Card">
+            <div class="id-card-container">
+                <!-- Lanyard Chain -->
+                <div class="id-card-chain" aria-hidden="true"></div>
+                
+                <!-- ID Card -->
+                <div class="id-card" role="img" aria-labelledby="card-name card-title">
+                    <div class="id-card-content">
+                        <!-- Profile Photo -->
+                        <img 
+                            src="/assets/images/profile.jpg" 
+                            alt="Devvrat Hans profile photo" 
+                            class="id-card-photo"
+                            loading="lazy"
+                        >
+                        
+                        <!-- Card Information -->
+                        <h1 id="card-name" class="id-card-name">DEVVRAT HANS</h1>
+                        <p id="card-title" class="id-card-title">Full Stack Developer</p>
+                        <p class="id-card-company">TechCorp Inc.</p>
+                        <p class="id-card-location">San Francisco, CA</p>
+                        <div class="id-card-id">ID: DEV-2025-001</div>
+                        
+                        <!-- Status Indicator -->
+                        <div class="id-card-status">
+                            <span class="status-indicator active" aria-label="Available for opportunities"></span>
+                            <span class="status-text">Available</span>
                         </div>
                     </div>
                     
-                    <div class="project-card glass-card">
-                        <div class="project-image">
-                            <div class="project-tag">Mobile</div>
-                        </div>
-                        <div class="project-content">
-                            <h3>Fitness Tracker</h3>
-                            <p>A cross-platform mobile app for tracking workouts, nutrition, and health metrics with custom analytics</p>
-                            <div class="project-tech">
-                                <span class="tech-tag">Flutter</span>
-                                <span class="tech-tag">Firebase</span>
-                                <span class="tech-tag">Charts</span>
-                            </div>
-                            <a href="projects.html#project2" class="btn btn-sm btn-primary">View Details</a>
-                        </div>
-                    </div>
-                    
-                    <div class="project-card glass-card">
-                        <div class="project-image">
-                            <div class="project-tag">API</div>
-                        </div>
-                        <div class="project-content">
-                            <h3>Weather Dashboard</h3>
-                            <p>A responsive weather application with real-time data visualization and location-based forecasting</p>
-                            <div class="project-tech">
-                                <span class="tech-tag">JavaScript</span>
-                                <span class="tech-tag">OpenWeather API</span>
-                                <span class="tech-tag">D3.js</span>
-                            </div>
-                            <a href="projects.html#project3" class="btn btn-sm btn-primary">View Details</a>
-                        </div>
-                    </div>
+                    <!-- Card Hologram Effect -->
+                    <div class="id-card-hologram" aria-hidden="true"></div>
                 </div>
-                <div class="view-all">
-                    <a href="projects.html" class="btn btn-outline">View All Projects</a>
+            </div>
+            
+            <!-- Quick Stats -->
+            <div class="quick-stats" role="complementary" aria-label="Developer statistics">
+                <div class="stat-item">
+                    <span class="stat-number">5+</span>
+                    <span class="stat-label">Years Experience</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">50+</span>
+                    <span class="stat-label">Projects Completed</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">25+</span>
+                    <span class="stat-label">Happy Clients</span>
                 </div>
             </div>
         </section>
-
-        <section class="recent-notes">
-            <div class="container">
-                <h2>Recent Notes</h2>
-                <div class="notes-grid">
-                    <!-- Note cards will go here -->
-                    <div class="note-card">
-                        <h3>Note Title</h3>
-                        <p>Brief excerpt from the note or description</p>
-                        <a href="notes.html#note1" class="btn">Read More</a>
+        
+        <!-- Terminal Section -->
+        <section class="terminal-section" aria-label="Interactive Terminal">
+            <div class="terminal-wrapper">
+                <!-- Terminal Header -->
+                <div class="terminal-header">
+                    <div class="terminal-controls">
+                        <button class="terminal-control close" aria-label="Close terminal" tabindex="-1"></button>
+                        <button class="terminal-control minimize" aria-label="Minimize terminal" tabindex="-1"></button>
+                        <button class="terminal-control maximize" aria-label="Maximize terminal" tabindex="-1"></button>
                     </div>
-                    <!-- More note cards -->
+                    <div class="terminal-title">devvrat@portfolio:~$</div>
+                    <div class="terminal-connection">
+                        <span class="connection-status connected"></span>
+                        <span class="connection-text">Connected</span>
+                    </div>
                 </div>
-                <div class="view-all">
-                    <a href="notes.html" class="btn btn-outline">View All Notes</a>
+                
+                <!-- Terminal Content -->
+                <div class="terminal" id="terminal-container" role="application" aria-label="Interactive terminal interface">
+                    <div class="terminal-output" id="terminal-output" aria-live="polite" aria-atomic="false">
+                        <!-- Terminal output will be dynamically generated -->
+                    </div>
+                    
+                    <!-- Terminal Input -->
+                    <div class="terminal-input-container">
+                        <span class="terminal-prompt" id="terminal-prompt" aria-hidden="true">devvrat@portfolio:~$ </span>
+                        <input 
+                            type="text" 
+                            id="terminal-input" 
+                            class="terminal-input" 
+                            autocomplete="off" 
+                            spellcheck="false"
+                            aria-label="Terminal command input"
+                            aria-describedby="terminal-help"
+                            placeholder="Type 'help' to get started..."
+                        >
+                        <span class="terminal-cursor" aria-hidden="true"></span>
+                    </div>
+                </div>
+                
+                <!-- Terminal Help Text -->
+                <div id="terminal-help" class="sr-only">
+                    Type commands and press Enter to execute. Use arrow keys for command history. Type 'help' for available commands.
+                </div>
+            </div>
+            
+            <!-- Terminal Features -->
+            <div class="terminal-features" role="complementary">
+                <div class="feature-badge">
+                    <span class="feature-icon">⌨️</span>
+                    <span class="feature-text">Interactive Commands</span>
+                </div>
+                <div class="feature-badge">
+                    <span class="feature-icon">📱</span>
+                    <span class="feature-text">Mobile Responsive</span>
+                </div>
+                <div class="feature-badge">
+                    <span class="feature-icon">♿</span>
+                    <span class="feature-text">Accessible</span>
                 </div>
             </div>
         </section>
     </main>
-
-    <!-- Footer will be loaded from template -->
-    <footer></footer>
-
-    <!-- JavaScript - Using ES modules -->
-    <script type="module" src="js/main.js"></script>
+    
+    <!-- Command Suggestions Overlay -->
+    <div id="command-suggestions" class="command-suggestions" role="listbox" aria-label="Command suggestions">
+        <!-- Suggestions will be populated dynamically -->
+    </div>
+    
+    <!-- Footer -->
+    <footer class="site-footer" role="contentinfo">
+        <div class="footer-content">
+            <p>&copy; 2025 Devvrat Hans. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="/privacy" aria-label="Privacy Policy">Privacy</a>
+                <a href="/terms" aria-label="Terms of Service">Terms</a>
+                <a href="mailto:devvrat.hans@example.com" aria-label="Contact via email">Contact</a>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Screen Reader Instructions -->
+    <div class="sr-only" id="screen-reader-instructions">
+        <h2>Portfolio Navigation Instructions</h2>
+        <p>This is an interactive terminal-themed portfolio. Use Tab to navigate between elements.</p>
+        <p>The terminal accepts text commands - type 'help' and press Enter to see available commands.</p>
+        <p>Use arrow keys to navigate command history in the terminal.</p>
+    </div>
+    
+    <!-- Scripts -->
+    <script src="/assets/js/index.js" defer></script>
+    <script src="/assets/js/terminal.js" defer></script>
+    
+    <!-- Service Worker Registration -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js')
+                    .then(registration => console.log('SW registered'))
+                    .catch(error => console.log('SW registration failed'));
+            });
+        }
+    </script>
+    
+    <!-- Analytics Placeholder -->
+    <script>
+        // Google Analytics or other analytics code would go here
+        // For development, we'll just log page views
+        console.log('Page view tracked:', {
+            page: window.location.pathname,
+            title: document.title,
+            timestamp: new Date().toISOString()
+        });
+    </script>
+    
+    <!-- Error Handling -->
+    <script>
+        window.addEventListener('error', function(e) {
+            console.error('Global error:', e.error);
+            // In production, you might want to send this to an error tracking service
+        });
+        
+        window.addEventListener('unhandledrejection', function(e) {
+            console.error('Unhandled promise rejection:', e.reason);
+            // In production, you might want to send this to an error tracking service
+        });
+    </script>
 </body>
 </html>

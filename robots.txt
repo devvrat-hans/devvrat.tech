@@ -1,9 +1,0 @@
-# robots.txt for devvrat.tech
-User-agent: *
-Allow: /
-
-# Don't index error pages
-Disallow: /404.html
-
-# Sitemap location
-Sitemap: https://devvrat.tech/sitemap.xml
